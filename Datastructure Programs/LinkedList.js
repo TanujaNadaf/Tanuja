@@ -1,7 +1,7 @@
 //creating a new node using constructor
 class Node {
-    constructor(data) {
-        this.data = data;
+    constructor(item) {
+        this.data = item;
         this.next = null;
     }
 }
@@ -11,16 +11,16 @@ class LinkedList {
         this.head = null;
         this.size = 0;
     }
-    add(data) {
+    add(item) {
         //creating the node object
-        var newNode = new Node(data);
-        //for first element
+        var newNode = new Node(item);
+        //for first element of the list to be inserted to linkedlist
         if (this.head == null) {
             this.head = newNode;
             this.size++;
             return;
         }
-        //for the following elements
+        //for the following elements of the list to be inserted to linkedlist
         else {
             var current = this.head;
             while (current.next) {
@@ -31,14 +31,15 @@ class LinkedList {
             }
          return;
         }
-    search(word) {
+    //search the given element in a linkedlist and return true if found
+        search(item) {
         if (this.head == null) {
             return false;
         }
         else {
             var current = this.head;
             while (current) {
-                if (current.data == word) {
+                if (current.data == item) {
                     return true;
                 }
                 current = current.next;
@@ -46,6 +47,7 @@ class LinkedList {
             return false;
         }
     }
+    //removing the first node of linkedlist if the given element is the first node data
     deletefirst() {
         if (this.head == null) {
             console.log("The linkedlist is empty");
@@ -55,16 +57,16 @@ class LinkedList {
         //this.size--;
         return;
     }
-    //search the elements and remove
-    remove(word) {
+    //if the searched element is found then remove
+    remove(item) {
         var current = this.head;
-        if (current.data == word) {
+        if (current.data == item) {
             this.deletefirst();
             return;
         }
         var prev = current;
         while (current) {
-            if (current.data == word) {
+            if (current.data == item) {
                 prev.next = current.next;
                 //this.size--;
             }
@@ -73,6 +75,7 @@ class LinkedList {
             }
         return;
     }
+    //get the elements of the linkedlist into a string form
     getData() {
         var current = this.head;
         var str = " ";
@@ -85,10 +88,32 @@ class LinkedList {
         }
         return str;
     }
+    //insert the element in the sorted manner
+    sortedInsert(item)
+    {
+        var newNode=new Node(item);
+        if(this.head==null ||newNode.data<=this.head.data)
+        {
+            newNode.next=this.head;
+            this.head=newNode;
+        }
+        else
+        {
+            var current=this.head;
+            while(current.next!=null && current.next.data<newNode.data)
+            {
+                current=current.next;
+            }
+            newNode.next=current.next;
+            current.next=newNode;
+        }
+       
+    return;
+    }
 
     //print the elements of the linkedlist
     show() {
-        var current = this.head;
+        var current = this.head; 
         var string = " ";
         while (current) {
             string = string + current.data;
