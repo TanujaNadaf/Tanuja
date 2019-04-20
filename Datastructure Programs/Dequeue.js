@@ -39,7 +39,7 @@ class Dequeue {
             return false;
         }
     this.front++;
-    this.rare--;
+    this.rear--;
     }
     return true;
     }

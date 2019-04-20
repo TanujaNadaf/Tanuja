@@ -28,11 +28,11 @@ class LinkedList {
             }
             this.size++;
             current.next = newNode;
-            }
-         return;
         }
+        return;
+    }
     //search the given element in a linkedlist and return true if found
-        search(item) {
+    search(item) {
         if (this.head == null) {
             return false;
         }
@@ -70,9 +70,9 @@ class LinkedList {
                 prev.next = current.next;
                 //this.size--;
             }
-            prev=current;
+            prev = current;
             current = current.next;
-            }
+        }
         return;
     }
     //get the elements of the linkedlist into a string form
@@ -89,36 +89,32 @@ class LinkedList {
         return str;
     }
     //insert the element in the sorted manner
-    sortedInsert(item)
-    {
-        var newNode=new Node(item);
-        if(this.head==null ||newNode.data<=this.head.data)
-        {
-            newNode.next=this.head;
-            this.head=newNode;
+    sortedInsert(item) {
+        var newNode = new Node(item);
+        if (this.head == null || newNode.data <= this.head.data) {
+            newNode.next = this.head;
+            this.head = newNode;
         }
-        else
-        {
-            var current=this.head;
-            while(current.next!=null && current.next.data<newNode.data)
-            {
-                current=current.next;
+        else {
+            var current = this.head;
+            while (current.next != null && current.next.data < newNode.data) {
+                current = current.next;
             }
-            newNode.next=current.next;
-            current.next=newNode;
+            newNode.next = current.next;
+            current.next = newNode;
         }
-       
-    return;
+
+        return;
     }
 
     //print the elements of the linkedlist
     show() {
-        var current = this.head; 
+        var current = this.head;
         var string = " ";
         while (current) {
             string = string + current.data;
             if (current.next != null) {
-                string = string + " "; 
+                string = string + " ";
             }
             current = current.next;
         }
