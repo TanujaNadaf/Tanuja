@@ -2,17 +2,45 @@ var readlineSync=require('readline-sync');
 const month=process.argv[2];
 const year=process.argv[3];
 var months=["January","February","March","April","May","June","July","August","September","October","November","December"];
-var days=[ 0, 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
-if(month==2 && isLeapYear(year))
+console.log(months[month-1] + "  "+ year);
+console.log(" S       M       T       W       T       F       S");
+var startingDay=day(month,year,months);
+var emptyCalendar=set2DArray(6,7);
+var calender=set2DCalendar(emptyCalendar,startingDay,month,year)
+function set2DCalendar(emptyCalendar,startingDay,month,year)
 {
-    days[2]=29;
+    var days = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
+    if (month == 2 && isLeapYear(year))  
+        days[1] = 29;
+    
+    
+    var tempStartingDay = 0, start = 0;
+    for (let i = 0; i < emptyCalendar.length; i++) 
+    {
+        var calendarString = "";
+        for (let j = 0; j < emptyCalendar[i].length; j++) 
+        {
+            if (days[month - 1] != start) 
+            {
+                if (tempStartingDay == startingDay) 
+                {
+                    start++;
+                    emptyCalendar[i][j] = start;                     // days.
+                    if (start < 10)                             // spacing for 1 to 9 numbers.
+                        emptyCalendar[i][j] = " " + start;
+                    calendarString = calendarString + emptyCalendar[i][j]+"\t";  
+                }
+                else
+                {
+                    tempStartingDay++;
+                    emptyCalendar[i][j] = "\t";                      // spacing before starting day.
+                    calendarString = calendarString + emptyCalendar[i][j];
+                }    
+            }          
+        }
+        console.log(calendarString);
+    }    
 }
-console.log("   " + months[month] + "  " + year);
-console.log("S M T W T F S");
-//var daysArray=["S","M","T","W","T","F","S"];
-var d=day(month,year,months);
-var calender=set2DArray(6,7);
-console.log(calender);
 function set2DArray(rows,columns)
 {
     var array=new Array(rows);
