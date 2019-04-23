@@ -1,49 +1,47 @@
-class Node
-{
-    constructor(data)
-    {
-        this.data=data;
-        this.next=null;
+class Node {
+    constructor(data) {
+        this.data = data;
+        this.next = null;
     }
 }
-class StackLinkedList
-{
-    constructor()
-    {
-        this.top=null;
-        this.size=0;
+class StackLinkedList {
+    constructor() {
+        this.head = null;
+        this.size = 0;
     }
-push(data)
-{
-    var newNode=new Node(data);
-    if(this.top==null)
-    {
-        this.top=newNode;
+    push(data) {
+        var newNode = new Node(data);
+        newNode.next = this.head;
+        this.head = newNode;
         this.size++;
         return;
     }
-    else{
-        var current=this.top;
-        while(current.next)
+    
+    
+    peek(position) {
+        var index=0;
+        if(position<this.getSize())
         {
-            current=current.next;
+        var current=this.head;
+        if(position==0)
+        {
+        return current.data;
         }
-    this.size++;
-    newNode.next=current;
-    this.top=newNode;
+        else{
+            while(index!=position)
+            {
+                current=current.next;
+                index++;
+            }
+        return current.data;
+        }
     }
-
 }
-getSize()
-{
+getSize() {
     return this.size;
 }
-
-
-
-
-
-
-
-
+}
+module.exports=
+{
+    StackLinkedList
 }

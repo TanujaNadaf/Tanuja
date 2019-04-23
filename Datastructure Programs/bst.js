@@ -3,8 +3,16 @@ module.exports={
 binarySearchTree()
 {
 var testCases=readlineSync.question("Enter the number of test cases" + " ");
-var array=[1,2,3,4,5];
-console.log("The array with integers which refers to number of nodes is:",array);
+//var array=[1,2,3,4,5];
+//console.log("The array with integers which refers to number of nodes is:",array);
+var array=readlineSync.question("Enter the array elements");
+console.log("Array is"+ array);
+console.log(array.length);
+
+for(let index=0;index<=testCases;index++)
+{
+     array[index]=readlineSync.question();
+}
 var first,second;
 for(var index=0;index<array.length;index++)
 {
