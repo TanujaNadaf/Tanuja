@@ -1,0 +1,39 @@
+{
+    "rice":[
+      {
+          "riceName":"Basmati",
+          "weight":"10",
+          "price":"90"
+      },
+      {
+          "riceName":"Aroma",
+          "weight":"20",
+          "price":"50"
+      }
+  ],
+  "pulses":[
+      {
+        "pulseName":"Toor",
+        "weight":"10",
+        "price":"70"
+      },
+      {
+          "pulseName":"Moong",
+          "weight":"20",
+          "price":"50"
+      }
+  ],
+  "wheat":[
+      {
+          "wheatName":"Common Wheat",
+          "weight":"20",
+          "price":"35"
+      },
+      {
+          "wheatName":"Encorn",
+          "weight":"10",
+          "price":"50"
+      }
+  
+  ]
+  }
