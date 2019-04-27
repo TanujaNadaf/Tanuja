@@ -1,0 +1,19 @@
+{
+    "stock": [
+        {
+            "shareName": "Infosys",
+            "numberOfShares": "10",
+            "sharePrice": "20000"
+        },
+        {
+            "shareName": "Wipro",
+            "numberOfShares": "20",
+            "sharePrice": "10000"
+        },
+        {
+            "shareName": "IBM",
+            "numberOfShares": "30",
+            "sharePrice": "10000"
+        }
+    ]
+}

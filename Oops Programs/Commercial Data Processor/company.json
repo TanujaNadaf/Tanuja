@@ -1,0 +1,22 @@
+{
+    "company": [
+        {
+            "companyName": "Infosys",
+            "symbol":"A",
+            "numberOfShares": "10",
+            "sharePrice": "20000"
+        },
+        {
+            "companyName": "Wipro",
+            "symbol":"B",
+            "numberOfShares": "20",
+            "sharePrice": "10000"
+        },
+        {
+            "shareName": "IBM",
+            "symbol":"C",
+            "numberOfShares": "30",
+            "sharePrice": "10000"
+        }
+    ]
+}

@@ -1,0 +1,26 @@
+{
+"customer":[
+          {
+              "customerName":"abc",
+              "customerID":"10",
+              "numberOfShare":"20",
+              "amount":"20000",
+              "price":"1000"
+          },
+          {
+            "customerName":"xyz",
+            "customerID":"20",
+            "numberOfShare":"30",
+            "amount":"40000",
+            "price":"2000"
+         },
+         {
+            "customerName":"pqr",
+            "customerID":"30",
+            "numberOfShare":"50",
+            "amount":"100000",
+            "price":"10000"
+         }
+
+]
+}
