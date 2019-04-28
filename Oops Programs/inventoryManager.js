@@ -2,7 +2,7 @@
  *  @Purpose   : A main program to access and manage the inventory
  *  @file      : inventoryManager.js
  *  @author    : Tanuja Nadaf
- *  @since     : 25/04/2019
+ *  @since     : 26/04/2019
  ********************************************************************************************************************/
 var fs=require('fs');
 var inventoryDetails=fs.readFileSync("stockDetails.json","UTF-8");
