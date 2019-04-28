@@ -1,0 +1,29 @@
+{
+    "company" : [{
+             "name"    : "Infosys",
+             "symbol"  : "A",
+             "shares"  : "100",
+             "share_per_price" : "1700"     
+            },
+            {
+            "name " : "Accenture",
+            "symbol": "B",
+            "shares": "120",
+            "share_per_price" : "1700" 
+            },
+            {
+            "name"  : "HCL",
+            "symbol" : "C",
+            "shares" : "250",
+            "share_per_price" : "1700" 
+            },
+            {
+            "name"  : "Wipro",
+            "symbol" : "D",
+            "shares" : "130",
+            "share_per_price" : "1700" 
+            }]
+            
+     
+    
+}
