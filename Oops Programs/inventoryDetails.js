@@ -2,7 +2,7 @@
  *  @Purpose       : Takes the inventory json file as input,parse to json object,calculate the value of each inventory and display the value
  *  @author        : Tanuja Nadaf
  *  @file          : inventoryDetails.js
- *  @since         : 24/04/2019
+ *  @since         : 25/04/2019
  **********************************************************************************************************************************/
 /* import the file stream module*/
  var fs=require('fs');
