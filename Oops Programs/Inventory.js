@@ -2,7 +2,7 @@
  *  @Purpose    : To create the inventory class and the inventory manage funtion to manage the in and out of inventory
  *  @file       : Inventory.js
  *  @author     : Tanuja Nadaf
- *  @since      : 25/04/2019
+ *  @since      : 26/04/2019
  *************************************************************************************************************************************/
 /* import the readline sync package*/
 var readlineSync=require('readline-sync');
